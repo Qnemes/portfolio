@@ -1,0 +1,23 @@
+{
+  "jsxSingleQuote": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "printWidth": 114,
+  "semi": false,
+  "endOfLine": "lf",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@lib/(.*)$",
+    "^@pages/(.*)$",
+    "^@components/(.*)$",
+    "^@hooks/(.*)$",
+    "^[./styles](.*)$",
+    "^@layouts/(.*)$",
+    "^@themes/(.*)$",
+    "^@config/(.*)$",
+    "^@utils/(.*)$",
+    "^[./]"
+  ]
+}

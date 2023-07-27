@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --no-cache",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "next": "^12.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-transition-group": "^4.4.5",
+    "scrollreveal": "^4.0.9",
+    "styled-components": "^5.3.11"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^13.4.9",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "eslint": "^8.44.0",
+    "eslint-config-next": "13.4.9",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^3.0.0"
+  }
+}
