@@ -45,6 +45,7 @@ export default class MyDocument extends Document {
     )
   }
 
+  // Example from https://github.com/vercel/next.js/tree/canary/examples/with-styled-components
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
@@ -59,12 +60,7 @@ export default class MyDocument extends Document {
       return {
         ...initialProps,
         isProduction,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        ),
+        styles: [initialProps.styles, sheet.getStyleElement()],
       }
     } finally {
       sheet.seal()

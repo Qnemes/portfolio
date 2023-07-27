@@ -4,6 +4,7 @@ import { KEY_CODES } from '@lib/constants'
 import { SwitchThemeContext } from '@pages/_app'
 import { useOnClickOutside } from '@hooks/useOnClickOutside'
 import { StyledMenu, StyledHamburgerButton, StyledSidebar } from './styles'
+import { scrollToSection } from '@utils/scrollToSection'
 
 export const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -98,6 +99,12 @@ export const Menu = () => {
   const wrapperRef = useRef()
   useOnClickOutside(wrapperRef, () => setMenuOpen(false))
 
+  const handleMenuClick = (e, sectionId) => {
+    e.preventDefault()
+    scrollToSection(sectionId)
+    setMenuOpen(false)
+  }
+
   return (
     <StyledMenu>
       <div ref={wrapperRef}>
@@ -113,7 +120,12 @@ export const Menu = () => {
               <ol>
                 {navLinks.map(({ url, name }) => (
                   <li key={url}>
-                    <a href={url} onClick={() => setMenuOpen(false)}>
+                    <a
+                      onClick={() => {
+                        scrollToSection(url)
+                        setMenuOpen(false)
+                      }}
+                    >
                       {name}
                     </a>
                   </li>

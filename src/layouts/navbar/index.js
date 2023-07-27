@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useContext } from 'react'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import { LOADER_DELAY } from '@lib/constants'
+import { LOADER_DELAY, IS_PRODUCTION } from '@lib/constants'
 import * as gtag from '@lib/gtag'
 import { SwitchThemeContext } from '@pages/_app'
 import { Menu } from '@components/Menu'
@@ -57,13 +57,7 @@ export const Navbar = ({ isHome }) => {
             <CSSTransition classNames={fadeClass} timeout={timeout}>
               <div className="logo" tabIndex="-1">
                 {isHome ? (
-                  <a
-                    onClick={(e) => {
-                      e.preventDefault()
-                      scrollToSection('main')
-                    }}
-                    aria-label="home"
-                  >
+                  <a onClick={() => scrollToSection('main')} aria-label="home">
                     <Image width={42} height={42} src="/logo.svg" alt="personal logo" priority={true} />
                   </a>
                 ) : (
@@ -85,14 +79,7 @@ export const Navbar = ({ isHome }) => {
                 ? navLinks?.map(({ url, name }, i) => (
                     <CSSTransition key={name} classNames={fadeDownClass} timeout={timeout}>
                       <li key={url} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-                        <a
-                          onClick={(e) => {
-                            e.preventDefault()
-                            scrollToSection(url)
-                          }}
-                        >
-                          {name}
-                        </a>
+                        <a onClick={() => scrollToSection(url)}>{name}</a>
                       </li>
                     </CSSTransition>
                   ))
