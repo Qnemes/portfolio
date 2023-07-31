@@ -21,7 +21,7 @@ export const Featured = () => {
 
   return (
     <section id="projects">
-      <NumberedHeading ref={revealTitle}>Some Projects I’ve Built</NumberedHeading>
+      <NumberedHeading ref={revealTitle}>Some Projects I&apos;ve Built</NumberedHeading>
 
       <div>
         {featuredProjects?.map(({ title, external, techs, github, cover, descriptionHtml }, i) => {
