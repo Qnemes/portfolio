@@ -1,4 +1,5 @@
 import GlobalStyles from '@styles/globals'
+import { Analytics } from '@vercel/analytics/react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
@@ -57,6 +58,7 @@ export default function App({ Component, pageProps }) {
           <Layout>
             <GlobalStyles />
             <Component {...pageProps} />
+            <Analytics />
           </Layout>
         </SwitchThemeContext.Provider>
       </ThemeProvider>
