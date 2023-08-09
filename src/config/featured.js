@@ -12,7 +12,7 @@ module.exports = [
     title: 'Bookshelf',
     cover: '/bookshelf.png',
     github: 'https://github.com/Qnemes/bookshelf',
-    external: 'https://bookshelf.lol',
+    external: 'https://epicbookshelf.netlify.app/',
     descriptionHtml:
       'An <a target="_blank" rel="noreferrer" href="https://epicreact.dev/">Epic React</a> app built to learn modern best practices in building and testing a React apps',
     techs: ['React', 'React Query', 'Unit/Integration/E2E Testing'],
