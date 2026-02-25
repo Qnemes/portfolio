@@ -15,8 +15,8 @@ module.exports = [
     techs: ['React', 'Redux', 'JSON Server', 'flv.js'],
   },
   {
-    title: 'Netflix App',
-    external: 'https://reactzetflix-app.netlify.app/',
+    title: 'Netflix Clone App',
+    external: 'https://streamov.netlify.app/',
     github: 'https://github.com/Qnemes/netflix-clone',
     descriptionHtml:
       'Four different pages, some using protected routes with auth listeners. Firestore handles all the data and that data is retrieved using a custom hook; authentication is used on all pages, which is handled by Firebase as well. Used compound components pattern to build components. The styling is handled via styled components.',
